@@ -7,8 +7,9 @@
   "scripts": {
     "compile": "tsc",
     "start": "npm run compile && npm run copy-schema && node ./dist/index.js",
-    "copy-schema": "cp src/schema/books-schema.graphql dist/",
-    "check-schema": "rover subgraph check My-Graph-mvqqne@current --name your-subgraph-name --schema src/schema/books-schema.graphql"
+    "copy-schema": "cp ./src/schema/books-schema.graphql dist/",
+    "check-schema": "rover subgraph check My-Graph-mvqqne@current --name your-subgraph-name --schema ./src/schema/books-schema.graphql",
+    "publish-schema": "rover subgraph publish My-Graph-mvqqne@current --schema ./src/schema/books-schema.graphql --name your-subgraph-name --routing-url http://products.prod.svc.cluster.local:4001/graphql"
   },
   "keywords": [],
   "author": "Matko Klaic",
