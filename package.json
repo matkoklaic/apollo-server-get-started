@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "compile": "tsc",
-    "start": "npm run compile && node ./dist/index.js"
+    "start": "npm run compile && npm run copy-schema && node ./dist/index.js",
+    "copy-schema": "cp src/schema/books-schema.graphql dist/"
   },
   "keywords": [],
   "author": "Matko Klaic",
