@@ -5,7 +5,8 @@
 # your data.
 
 # This "Book" type defines the queryable fields for every book in our data source.
-type Book {
+type Book @key(fields: "id") {
+  id: ID!
   title: String
   author: String
 }
